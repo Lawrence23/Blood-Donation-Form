@@ -8,17 +8,16 @@ gulp.task('default', ['scripts', 'sass', 'watch']);
 
 gulp.task('scripts', function() {
   return gulp.src('./assets/scripts/*.js')
-    .pipe(concat('scripts.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('./assets/scripts/'));
+    .pipe(gulp.dest('build/js/'));
 });
 
 gulp.task('sass', function() {
   return sass('./assets/sass/*.scss', {style: 'compressed'})
     .pipe(concat('styles.css'))
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('assets/css/'));
+    .pipe(gulp.dest('build/css/'));
 });
 
 gulp.task('watch', function() {

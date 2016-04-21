@@ -1,40 +1,82 @@
-.container {
-    margin: 10% auto;
-    width: 50%;
-    .heading {
-		text-align: center;
-		padding-bottom: 10%;
-    }
-    .buttons {
-    	margin: 0 auto;
-    	width: 50%;
-    	.btn {
-		    background-color: #b71c1c;
-		    border: none;
-		    border-radius: 2px;
-    		color: #fff;
-		    cursor: pointer;
-		    display: inline-block;
-		    height: 36px;
-		    letter-spacing: .5px;
-		    line-height: 36px;
-		    outline: 0;
-		    padding: 0 2rem;
-		    text-transform: uppercase;
-		    transition: .2s ease-out;
-		    text-decoration: none;
-		    text-align: center;
-		    vertical-align: middle;
-		    -webkit-tap-highlight-color: transparent;
-		    &:hover {
-				background-color: #d32f2f;
-		    }
-    		&.btn-reg {
-    			float: left;
-    		}
-    		&.btn-srch {
-    			float: right;
-    		}
-    	}
-    }
+.home {
+	.container {
+	    margin: 10% auto;
+	    width: 50%;
+	    .heading {
+			text-align: center;
+			padding-bottom: 10%;
+	    }
+	    .buttons {
+	    	.btn {
+				&.btn-reg {
+					float: left;
+				}
+				&.btn-srch {
+					float: right;
+				}
+	    	}
+	    }
+	}
+}
+.buttons {
+	margin: 0 auto;
+	width: 50%;
+	.btn {
+	    background-color: #b71c1c;
+	    border: none;
+	    border-radius: 2px;
+		color: #fff;
+	    cursor: pointer;
+	    display: inline-block;
+	    height: 36px;
+	    letter-spacing: .5px;
+	    line-height: 36px;
+	    outline: 0;
+	    padding: 0 2rem;
+	    text-transform: uppercase;
+	    transition: .2s ease-out;
+	    text-decoration: none;
+	    text-align: center;
+	    vertical-align: middle;
+	    -webkit-tap-highlight-color: transparent;
+	    &:hover {
+			background-color: #d32f2f;
+	    }
+	}
+}
+.register {
+	background-color: #b71c1c;
+	.container {
+	    background-color: #fff;
+	    margin: 5%;
+	    min-height: 500px;
+	    border-radius: 5px;
+	    padding: 5%;
+	    .title {
+    	    padding: 0 6%;
+		    margin: 1% 0 7% 0;
+	    }
+	    .reg-form {
+    	    margin: 0 auto;
+    		width: 60%;
+	    	.form-field {
+	    		min-height: 40px;
+	    		.label {
+	    			font-size: 18px;
+	    		}
+				.form-input {
+					float: right;
+					width: 50%;
+				}
+				.form-select {
+					float: right;
+					width: 50%;
+				}
+				&.buttons {
+					text-align: center;
+					margin-top: 5%;
+				}
+	    	}
+	    }
+	}
 }
