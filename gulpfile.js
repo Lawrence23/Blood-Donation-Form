@@ -4,7 +4,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var sass = require('gulp-ruby-sass');
 
-gulp.task('default', ['scripts', 'sass']);
+gulp.task('default', ['scripts', 'sass', 'watch']);
 
 gulp.task('scripts', function() {
   return gulp.src('./assets/scripts/*.js')
@@ -21,9 +21,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('assets/css/'));
 });
 
-/*gulp.task('compress', function() {
-  return gulp.src('./dist/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('./dist/'));
+gulp.task('watch', function() {
+  	gulp.watch('./assets/sass/*.scss', ['sass']);
+  	gulp.watch('./assets/scripts/*.js', ['scripts']);
 });
-*/
